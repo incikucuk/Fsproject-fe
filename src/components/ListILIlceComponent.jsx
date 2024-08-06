@@ -26,12 +26,12 @@ const ListILIlceComponent = () => {
   return (
     <div className="container">
     <h2 className="text-center">IL-Ilce Listesi</h2>
-    <button className="btn btn-primary mb-2" onClick={addNewILIlce}>Add Il-Ilce</button>
+    <button className="btn btn-primary mb-2" onClick={addNewILIlce}>Il-Ilce Ekle</button>
 
     <table className="table table-striped table-bordered">
       <thead className="table-dark">
         <tr>
-          <th scope="col"> Id</th>
+          <th scope="col"> ID</th>
           <th scope="col"> İL</th>
           <th scope="col"> İlce </th>
         </tr>
