@@ -5,7 +5,7 @@ const HeaderComponent = () => {
     <div>
         <header>
         <nav className='navbar navbar-dark bg-dark'>
-            <a className='navbar-brand' href='https://www.mavidev.com.tr'>MAVIDEV IL&Ilce Yonetim Sistemi</a>
+            <a className='navbar-brand' href='http://localhost:3000'>IL&Ilce Yonetim Sistemi - MAVIDEV</a>
         </nav>
     </header>
     </div>

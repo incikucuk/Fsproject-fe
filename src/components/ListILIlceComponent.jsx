@@ -8,26 +8,28 @@ const ListILIlceComponent = () => {
   const navigator = useNavigate();   //add kısmı router yapılabilmesi icin kullanildi
 
   useEffect(() => {
-     listILIlce().then((response) => {
-        setIlIlceler(response.data)
-     }).catch(error => {
-        console.error(error);
-     })
+    getAllILIlce();
   }, [])
 
+  function getAllILIlce() {
+    listILIlce().then((response) => {
+      setIlIlceler(response.data)
+   }).catch(error => {
+      console.error(error);
+   })
+  }
   function addNewILIlce() {
     navigator("/add-il-ilce")
-
   }
-  function anasayfa() {
+
+
+  function homepage() {
     navigator("/")
   }
-
   return (
     <div className="container">
     <h2 className="text-center">IL-Ilce Listesi</h2>
-    <button className="btn btn-primary mb-2" onClick={addNewILIlce}>Il-Ilce Ekle</button>
-
+    <button className="btn btn-primary mb-2" onClick={addNewILIlce}>Add Il-Ilce</button>
     <table className="table table-striped table-bordered">
       <thead className="table-dark">
         <tr>
@@ -43,11 +45,13 @@ const ListILIlceComponent = () => {
             <td>{ilIlce.id}</td>
             <td>{ilIlce.il}</td>
             <td>{ilIlce.ilce}</td>
+
+
           </tr>
         )}
       </tbody>
     </table>
-    <button className="btn btn-danger mb-2" onClick={anasayfa}>Anasayfa</button>
+    <button className="btn btn-warning mb-2" onClick={homepage}>Homepage</button>
   </div>
   );
 };

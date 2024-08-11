@@ -5,6 +5,7 @@ import ILIlceComponent from "./components/ILIlceComponent";
 import AnasayfaComponent from "./components/AnasayfaComponent";
 import ListILIlceComponent from "./components/ListILIlceComponent";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomepageComponent from "./components/AnasayfaComponent";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <BrowserRouter>
         <HeaderComponent />
         <Routes>
-          <Route path="/" element={ <AnasayfaComponent />}></Route>
+          <Route path="/" element={ <HomepageComponent />}></Route>
           <Route path="/il-ilce" element={ <ListILIlceComponent />}></Route>
           <Route path="/add-il-ilce" element={ <ILIlceComponent />}></Route>
         </Routes>
